@@ -1,6 +1,6 @@
 # Document-Based Question Answering Chatbot
 
-This project implements a Python-based chatbot that answers user questions using open-source Large Language Models (LLMs). The chatbot accesses information from a provided PDF document (NVIDIAAn.pdf) to answer questions accurately.
+This project implements a Python-based chatbot that answers user questions using open-source Large Language Models (LLMs). The chatbot accesses information from a provided PDF document to answer questions accurately.
 
 ## Table of Contents
 
