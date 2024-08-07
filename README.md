@@ -51,7 +51,8 @@ bash
 Copy code
 pip install -r requirements.txt
 Download the PDF file and place it in the project directory.
-Usage
+
+## Usage
 Run the Flask server:
 bash
 Copy code
@@ -62,31 +63,38 @@ Copy code
 {
   "question": "Your question here"
 }
-Technical Details
+
+## Technical Details
+
 Text Processing
 Text Extraction: Uses PyMuPDF to extract text from the PDF document.
 Cleaning and Normalization: Lowercases the text and removes punctuation.
 Chunking: Splits the text into chunks of 512 tokens for processing.
-Embedding Generation
+
+## Embedding Generation
 Model: Uses the paraphrase-MiniLM-L6-v2 model from Sentence Transformers to generate embeddings for text chunks.
 Vector Store: Uses Faiss for efficient similarity searches.
-Question Answering
+
+## Question Answering
 Model: Uses distilbert-base-uncased-distilled-squad from Huggingface Transformers for question answering.
 Answer Selection: Finds the most relevant text chunks using Faiss, then extracts answers using the DistilBERT model.
-Model Architecture
+
+## Model Architecture
 Text Extraction and Preprocessing: Extract text from the PDF, clean and normalize it, then split it into chunks.
 Embedding Generation: Generate embeddings for the text chunks using the Sentence Transformer model.
 Indexing with Faiss: Create a Faiss index of the embeddings for efficient similarity searches.
 Question Answering: Use DistilBERT to find answers in the most relevant text chunks.
-Database Choice
-Vector Database: Faiss is used for managing embeddings and performing similarity searches due to its efficiency in handling high-dimensional data.
-Limitations and Future Improvements
-Limitations:
 
+## Database Used
+Vector Database: Faiss is used for managing embeddings and performing similarity searches due to its efficiency in handling high-dimensional data.
+
+## Limitations and Future Improvements
+
+Limitations:
 The chatbot may still provide inaccurate answers to questions not covered by the document.
 Processing very large documents may require optimization for efficiency.
-Future Improvements:
 
+Future Improvements:
 Integrate more sophisticated models or multiple documents.
 Implement better handling for identifying irrelevant questions.
 Explore hybrid database approaches for more complex data management needs.
