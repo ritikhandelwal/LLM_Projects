@@ -50,7 +50,7 @@ Install the required packages:
 bash
 Copy code
 pip install -r requirements.txt
-Download the PDF file (NVIDIAAn.pdf) and place it in the project directory.
+Download the PDF file and place it in the project directory.
 Usage
 Run the Flask server:
 bash
